@@ -1,0 +1,126 @@
+.container {
+    display: inline-flex;
+    max-width: 100%;
+    height: 90vh;
+    background-color: rgb(245, 244, 244);
+    margin: 5vh auto;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;  
+    .info-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 90%;
+      height: 100%;
+      .info-cards{
+         width: 44%;
+         height:75vh ;
+         margin-top: 8%;
+         margin-left: 3%;
+         background-color: aqua;
+         border-radius: 10px;
+         }
+
+         
+      .chart-container {
+       
+        width: 58%;
+        height: 73.5vh;
+        margin-left: 4%;
+        margin-top: 7%;
+        margin-right: 1%;
+        line-height: 1.5;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        mat-tab-group{
+          height: 75vh;
+          mat-tab{
+            height: 100vh;
+            canvas {
+              width: 100%;
+              height: 100%;
+            }
+          }
+         
+        }
+      }
+        
+      }
+    
+
+  
+    .searchBar {
+      position: absolute;
+      display: inline-flex;
+      top: 17%;
+      background-color: rgb(108, 176, 253);
+      width: 73.5%;
+      height: 10vh;
+      border-radius: 15px;
+  
+      align-items: center;
+      justify-content: center;
+  
+      .myinput {
+        width: 40%;
+        margin-top: 3.5vh;
+  
+        input {
+          padding: 0;
+        }
+      }
+  
+      .searchBtn {
+        width: 12%;
+        height: 7.9vh;
+        background-color: rgb(3, 203, 218);
+        color: black;
+        margin-left: 5%;
+        transition: 0.5s;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+  
+      .searchBtn:hover {
+        background-color: rgb(11, 187, 143);
+        border-bottom: 1px solid black;
+        border-right: 1px solid black;
+        box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.7);
+      }
+    }
+  }
+  .example-tab-icon {
+    margin-right: 8px;
+  }
+  .example-card {
+    max-width: 400px;
+    height: 66vh;
+
+  }
+  mat-card-content{
+    height: 53vh;
+  }
+
+  h4{
+    font-weight: 600;
+    text-decoration: underline;
+    color: rgb(18, 122, 122);
+  }
+  span{
+    font-size: 12px;
+    font-weight: 500;
+  }
+  p{
+    font-weight: 400;
+  }
+  mat-card-content{
+   height: 61vh;
+
+  }
+
+  mat-card{
+    background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+
+  }

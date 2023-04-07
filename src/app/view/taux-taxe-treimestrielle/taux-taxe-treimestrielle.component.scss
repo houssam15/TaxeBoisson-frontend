@@ -1,0 +1,31 @@
+.add-button{
+    width:9% ;
+    height:8.2vh ;
+    margin-bottom: 2vh;
+    margin-left: 1%;
+    background-color: whitesmoke;
+
+}
+.add-button:hover{
+   
+    border-bottom: 1px solid black;
+}
+table {
+    width: 100%;
+  }
+  
+  .mat-mdc-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  
+ .container{
+    max-width: 1300px;
+    margin:0 auto;
+    th, td{
+        max-width: 10px;
+    }
+ }
+ .action{
+    width: 15%;
+ }

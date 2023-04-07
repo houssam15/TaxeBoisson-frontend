@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  
+  .head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 80%;
+    margin: 0 auto;
+    
+    mat-form-field {
+      flex-grow: 1;
+    }
+    
+    .add-button {
+      margin: 0 auto;
+      padding:25px 60px;
+      margin-bottom: 19px;
+      margin-left: 5px;
+    }
+    .add-button:hover{
+      border-bottom: 1px solid black;
+  }
+  }
+  
+  .mat-elevation-z8 {
+    overflow-x: auto;
+    max-width: 80%;
+    margin: 0 auto;
+    margin-top: 10px;
+    
+    table {
+      width: 100%;
+    }
+  }
+}
+.action{
+  width: 50px;
+}

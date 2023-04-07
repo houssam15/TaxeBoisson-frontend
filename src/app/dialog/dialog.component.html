@@ -1,0 +1,50 @@
+<h1 mat-dialog-title>TauxTaxeTrimestrielle Form</h1>
+<div mat-dialog-content>
+    <form [formGroup]="tauxTaxeForm">
+        <mat-form-field appearance="outline">
+            <mat-label>Reference</mat-label>
+            <input formControlName="ref" matInput placeholder="Reference" [readonly]="readOnly">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Categorie De Local</mat-label>
+            <mat-select formControlName="categorieDeLocal" placeholder="">
+                <ng-container *ngFor="let category of categories; let i = index">
+                    <mat-option [value]="category.code">{{category.libelle}}</mat-option>
+                </ng-container>
+            </mat-select>
+        </mat-form-field>
+        <div class="date">
+            <mat-form-field class="date" color="accent" appearance="fill">
+                <mat-label>Date D'application Min</mat-label>
+                <input formControlName="dateAppMin" matInput [matDatepicker]="picker1">
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
+                <mat-datepicker #picker1></mat-datepicker>
+            </mat-form-field>
+          
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Date D'application Max</mat-label>
+                <input formControlName="dateAppMax" matInput [matDatepicker]="picker">
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker  #picker></mat-datepicker>
+            </mat-form-field>
+        </div>
+        <mat-form-field appearance="outline">
+            <mat-label>Pourcentage</mat-label>
+            <input formControlName="pourcentage" matInput type="number" placeholder="Pourcentage">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Pourcentage Retard 1st mois  </mat-label>
+            <input formControlName="pourcentageRetardPremierMois" matInput type="number" placeholder="1st mois Retard">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Pourcentage Retard autre mois  </mat-label>
+            <input  formControlName="pourcentageRetardAutreMois" matInput type="number" placeholder="autre mois Retard">
+        </mat-form-field>
+    </form>
+</div>
+<div mat-dialog-action [align]="'end'">
+    <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+    <button style="margin:10px 20px;" mat-raised-button color="primary" (click)="saveTaux()">{{actionBtn}}</button>
+</div>
