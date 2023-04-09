@@ -17,4 +17,5 @@ export class TaxeTrimestrielle {
   public  montantRetardAutreMois!: number;
   public  chifrreAffaire!: number;
   public  dateActuel!: Date;
+  public trimestre !: Date;
 }

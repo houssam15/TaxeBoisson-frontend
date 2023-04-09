@@ -57,6 +57,7 @@ export class Dialog2Component implements OnInit{
     }
     public saveTaxe(){
       this.taxeFormTOTrimestrielle();
+      console.log("save *********************************")
       if(!this.editData){
         this.taxeService.save().subscribe(data => {
           if(data<0){
@@ -76,30 +77,27 @@ export class Dialog2Component implements OnInit{
           }
         })
       }else{
+        console.log("update *********************************")
         this.updateTaxe();
 
       }
-      
+        
     }
     updateTaxe(){
       this.taxeFormTOTrimestrielle();
+      console.log("taxe trimestrielle ********"+this.taxeTrimestrielle.trimestre)
       this.taxeService.editTaxe(this.taxeTrimestrielle).subscribe(
         data => {
           if(data<0){
-            if(data==0){alert("local or taux  not found !!")}
-            if(data==-1){alert("Taxe déja exist !!  ")}
+            if(data==-1){alert("Taxe n'exist pas  !!  ")}
             if(data==-2){alert("Redevable not found !! ")}
             if(data==-3){alert("Local not found ")}
             if(data==-4){alert("invalid chiffre D'affaire")}
             if(data==-5){alert("Categorie de local  not found ")}
+            if(data==-6){alert(" data payement Trimestrielle is null")}
           //  if(data==-6){alert("taux not found ")}
             if(data==-7){alert("comeback in the end of  trimestre !!")}
-            if(data==-8){alert("  no taux applicable for this local  ")}
-            if(data==-9){alert("wait intel the end of trimestre !! ")}
-            if(data==-10){alert("local not found ")}
-            if(data==-11){alert("taxe not found ")}
-
-          
+            if(data==-8){alert("  no taux applicable for this local  ")}  
           }
           else if(data>0){
             alert("update success !!");

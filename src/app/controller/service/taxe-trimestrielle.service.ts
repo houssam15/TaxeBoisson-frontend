@@ -19,12 +19,12 @@ export class TaxeTrimestrielleService {
   private _taxeTrimestrielle!: TaxeTrimestrielle;
   private _taxeTrimestrielles!:Array<TaxeTrimestrielle>;
   url="http://localhost:8036/api/v1/taxetrimestrielle/";
-  ingore:boolean=false;
+ // ingore:boolean=false;
   constructor(private http: HttpClient) {
   }
 
 public save():Observable<number>{
-    return this.http.post<number>(this.url+"ingore/"+this.ingore.toString(),this.taxeTrimestrielle);
+    return this.http.post<number>(this.url,this.taxeTrimestrielle);
   }
 public findAll():Observable<Array<TaxeTrimestrielle>>{
     return this.http.get<Array<TaxeTrimestrielle>>(this.url);
