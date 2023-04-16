@@ -14,7 +14,7 @@ import { Dialog } from '@angular/cdk/dialog';
   styleUrls: ['./taux-taxe-treimestrielle.component.scss']
 })
 export class TauxTaxeTreimestrielleComponent {
-  displayedColumns: string[] = ['id', 'ref','categorieDeLocal', 'dateAppMin', 'dateAppMax','pourcentage','pourcentageRetardPremierMois','pourcentageRetardAutreMois','action'];
+  displayedColumns: string[] = [ 'ref','categorieDeLocal', 'dateAppMin', 'dateAppMax','pourcentage','pourcentageRetardPremierMois','pourcentageRetardAutreMois','action'];
   dataSource!: MatTableDataSource<any>;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;

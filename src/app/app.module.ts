@@ -27,13 +27,26 @@ import { HomeComponent } from './view/home/home.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatCardModule} from '@angular/material/card';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { NotificationLocalComponent } from './view/notification-local/notification-local.component';
+import { Dialog3Component } from './dialog3/dialog3.component';
+import { Dialog4Component } from './dialog4/dialog4.component';
+import { GeneralComponent } from './view/general/general.component';
+import { Dialog5Component } from './dialog5/dialog5.component';
+
+//modification
 
 
 const routes: Routes=[
   {path:'',redirectTo:'home',pathMatch:'full'},
-  {path:'home',component:HomeComponent},
+  {path:'home',component:GeneralComponent},
   {path:'tauxTaxeTrimestrielle',component:TauxTaxeTreimestrielleComponent},
-  {path:'taxeTrimestrielle',component:TaxeTrimestrielleComponent}
+  {path:'taxeTrimestrielle',component:TaxeTrimestrielleComponent},
+  {path:'notificationLocal',component:NotificationLocalComponent}
+
+
 ]
 @NgModule({
   declarations: [
@@ -42,7 +55,12 @@ const routes: Routes=[
     Dialog2Component,
     TauxTaxeTreimestrielleComponent,
     TaxeTrimestrielleComponent,
-    HomeComponent
+    HomeComponent,
+    NotificationLocalComponent,
+    Dialog3Component,
+    Dialog4Component,
+    GeneralComponent,
+    Dialog5Component
   ],
   imports: [
     BrowserModule,
@@ -67,7 +85,10 @@ const routes: Routes=[
     MatSortModule,
     MatGridListModule,
     MatTabsModule,
-    MatCardModule
+    MatCardModule,
+    MatSidenavModule,
+    MatListModule,
+    FlexLayoutModule
     
   ],
   providers: [],

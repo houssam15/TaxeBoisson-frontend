@@ -15,6 +15,7 @@
     "@angular/common": "^15.2.0",
     "@angular/compiler": "^15.2.0",
     "@angular/core": "^15.2.0",
+    "@angular/flex-layout": "^15.0.0-beta.42",
     "@angular/forms": "^15.2.0",
     "@angular/material": "^15.2.5",
     "@angular/platform-browser": "^15.2.0",
@@ -24,6 +25,10 @@
     "bootstrap-icons": "^1.10.4",
     "canvasjs": "^1.8.3",
     "chart.js": "^2.9.4",
+    "flex-layout": "^1.0.1",
+    "flexlayout": "^1.0.6",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^2.5.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0"

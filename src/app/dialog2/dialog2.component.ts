@@ -21,7 +21,7 @@ export class Dialog2Component implements OnInit{
   actionBtn : string = "Save";
   readOnly : boolean =false;
   taxeForm!: FormGroup; 
-  constructor(private formBuilder : FormBuilder,private taxeService : TaxeTrimestrielleService,private categorieLocalService: CategorieDeLocalService,private dialogRef:MatDialogRef<DialogComponent>,@Inject(MAT_DIALOG_DATA) public editData: any){}
+  constructor(private formBuilder : FormBuilder,private taxeService : TaxeTrimestrielleService,private categorieLocalService: CategorieDeLocalService,private dialogRef:MatDialogRef<DialogComponent>,@Inject(MAT_DIALOG_DATA) public editData: any ){}
     ngOnInit(): void {
         this.taxeForm=this.formBuilder.group({
           reference : ['',Validators.required],
@@ -55,9 +55,14 @@ export class Dialog2Component implements OnInit{
       this.taxeTrimestrielle.dateActuel=this.taxeForm.value.dateActuel;
 
     }
+
+
+
     public saveTaxe(){
       this.taxeFormTOTrimestrielle();
       console.log("save *********************************")
+      console.log("reference de taxe : "+this.taxeTrimestrielle.reference)
+
       if(!this.editData){
         this.taxeService.save().subscribe(data => {
           if(data<0){

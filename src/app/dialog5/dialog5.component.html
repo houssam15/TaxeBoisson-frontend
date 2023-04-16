@@ -1,0 +1,136 @@
+<div class="container">
+    <div  id="elt" class="wrapper">
+        <div class="invoice_wrapper">
+            <div class="header">
+                <div class="logo_invoice_wrap">
+                    <div class="logo_sec">
+                        <img src="../../assets/images/codingboss.png" alt="code logo">
+                        <div class="title_wrap">
+                            <p class="title bold">Taxe Boisson</p>
+                        </div>
+                    </div>
+                    <div class="invoice_sec">
+                        <p class="invoice bold">Maroc</p>
+                        <p class="invoice_no">
+                            <span class="bold">Reference</span>
+                            <span>{{taxeTrimestrielle.reference}}</span>
+                        </p>
+                        <p class="date">
+                            <span class="bold">Date</span>
+                            <span>{{taxeTrimestrielle.dateActuel}}</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="bill_total_wrap">
+                    <div class="bill_sec">
+                        <p>To</p> 
+                          <p class="bold name">{{redevable.nom}} {{redevable.prenom}} </p>
+                        <span>
+                           {{categorieRedevable.libelle}}<br/>
+                           +212 82 74 95 03
+                        </span>
+                    </div>
+                    <div class="total_wrap">
+                        <p>Local</p>
+                          <p class="bold price">reference : {{local.reference}}</p>
+                        <p class="bold price">categorie : {{local.categorieDeLocal.libelle}}</p>
+                        <p class="bold price">DDPT : {{local.dernierDatePayTrimestriel}}</p>
+
+                    </div>
+                </div>
+            </div>
+            <h5 style="text-decoration:underline;">Taux Taxe Trimestrielle :</h5>
+            <div class="body">
+                <div class="main_table">
+                    
+                    <div class="table_body">
+                        <div class="row">
+                            <div class="col col_no">
+                                <p>Reference</p>
+                            </div>
+                            <div class="col col_des">
+                                <p>Categorie</p>
+                            </div>
+                            <div class="col col_price">
+                            <p>Date Application Min</p>
+                            </div>
+                            <div class="col col_qty">
+                                <p>Date Application Max</p>
+                            </div>
+                            
+                        </div>
+                        <div class="row">
+                            <div class="col col_no">
+                                <p>{{tauxTaxeTrimestrielle.ref}}</p>
+                            </div>
+                            <div class="col col_des">
+                                <p>{{categorieDeLocal.libelle}}</p>
+                            </div>
+                            <div class="col col_price">
+                                <p>{{tauxTaxeTrimestrielle.dateAppMin}}</p>
+                            </div>
+                            <div class="col col_qty">
+                                <p>{{tauxTaxeTrimestrielle.dateAppMax}}</p>
+                            </div>
+                            
+                        </div>
+                        
+                        
+                        
+                    </div>
+                </div>
+                <div class="paymethod_grandtotal_wrap">
+                    <div style="display: block;">
+                        <div class="paymethod_sec" style="height: 15vh; display: flex;justify-content: start;align-items: center; background-color: rgb(188, 191, 194);">
+                            <p  class="bold">Retard months : <span style="margin-left:10px;font-size: xx-large; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"> {{taxeTrimestrielle.retardMonths}}</span>    </p>
+                        </div>
+                        <div class="paymethod_sec" style="margin-top: 24px;">
+                            <p class="bold">Payment Method</p>
+                            <p>Visa, master Card and We accept Cheque</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grandtotal_sec" style="width: 50%;">
+                        <p class="bold">
+                            <span style="font-size: 14px; font-weight: 1200;">Chiffre d'affaire</span>
+                            <span>${{taxeTrimestrielle.chifrreAffaire}}</span>
+                        </p>
+                        <p>
+                            <span>Taux  {{tauxTaxeTrimestrielle.pourcentage}}%</span>
+                            <span>${{taxeTrimestrielle.montantBase}}</span>
+                        </p>
+                        <p>
+                            <span>Retard 1st month {{tauxTaxeTrimestrielle.pourcentageRetardPremierMois}}% </span>
+                            <span>${{taxeTrimestrielle.montantRetardPremierMois}}</span>
+                        </p>
+                        <p>
+                            <span>Retard other months {{tauxTaxeTrimestrielle.pourcentageRetardAutreMois}}% </span>
+                            <span>${{taxeTrimestrielle.montantRetardAutreMois}}</span>
+                        </p>
+                        <div style="background-color: rgba(0, 0, 0, 0.171);">
+                            <p class="bold">
+                                <span style="font-size: 16px; font-weight: 1200;">Total a payé : </span>
+                                <span>${{taxeTrimestrielle.montantTotal.toFixed(2)}}</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <p>Thank you and Best Wishes</p>
+                <div class="terms">
+                    <p class="tc bold">Terms & Coditions</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit non praesentium doloribus. Quaerat vero iure itaque odio numquam, debitis illo quasi consequuntur velit, explicabo esse nesciunt error aliquid quis eius!</p>
+                </div>
+            </div>
+        </div>
+        <div class="img-container">
+            <img class="cache1" src="../../assets/images/back1.webp" alt="">
+            <img src="../../assets/images/signature.png" alt="">
+            <img  class="cache"src="../../assets/images/back.jpg" alt="">
+        </div>
+    </div>
+    <div class="btn-container">
+        <button class="btn" (click)="convertToPDF()">Download </button>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+<div>
+    
+</div>
+<h1 mat-dialog-title>NotificationLocal Form</h1>
+<div mat-dialog-content>
+    <form [formGroup]="notificationLocalForm">
+        <mat-form-field appearance="outline">
+            <mat-label>Reference</mat-label>
+            <input formControlName="ref" matInput placeholder="Reference" [readonly]="readOnly">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Redevable</mat-label>
+            <input formControlName="redevable" matInput placeholder="CIN" [readonly]="readOnly" >
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Local</mat-label>
+            <input formControlName="local" matInput placeholder="Reference" [readonly]="readOnly">
+        </mat-form-field>
+
+        <mat-form-field color="accent" appearance="fill">
+            <mat-label>Date Actuel</mat-label>
+            <input formControlName="dateActuelle" matInput [matDatepicker]="picker3" >
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker3"></mat-datepicker-toggle>
+            <mat-datepicker #picker3></mat-datepicker>
+          </mat-form-field>
+    </form>
+</div>
+<div mat-dialog-action [align]="'end'">
+    <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+    <button style="margin:10px 20px;" mat-raised-button color="primary" (click)="saveNotification()">{{actionBtn}}</button>
+</div>

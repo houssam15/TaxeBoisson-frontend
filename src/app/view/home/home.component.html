@@ -1,110 +1,111 @@
-<div class="container">
-    <div class="searchBar">
-      <mat-form-field appearance="outline" class="myinput">
-        <mat-label>Check Taxes State:</mat-label>
-        <input matInput type="text" placeholder="entre reference of any local taxes " [(ngModel)]="taxeTrimestrielle.reference">
-      </mat-form-field>
-      <button mat-button class="searchBtn" (click)="findTaxe(taxeTrimestrielle.reference)">Search</button>
-    </div>
-    <div class="info-container">
-        <div class="info-cards" >
-            <mat-tab-group>
-                <mat-tab>
-                  <ng-template mat-tab-label>
-                    <mat-icon class="example-tab-icon">perm_identity</mat-icon>
-                    Redevable
-                  </ng-template>
-                  <mat-card class="example-card">
-                    <mat-card-header>
-                      <mat-card-title>{{redevable.nom}} {{redevable.prenom}}</mat-card-title>
-                      <mat-card-subtitle>{{categorieDeRedevable.libelle}}</mat-card-subtitle>
-                    </mat-card-header>
-                    <mat-card-content class="redevable">
-                        <h4>Redevable  </h4>
-                        <p><span >id</span> : {{redevable.id}} </p>
-                      <p><span >nom</span> : {{redevable.nom}} </p>
-                      <p><span >prenom</span> : {{redevable.prenom}} </p>
-                      <p><span >cin</span> : {{redevable.cin}} </p>
-                        <h4>Categorie De Redevable  </h4>
-                      <p><span >Code  </span> : {{categorieDeRedevable.code}} </p>
-                      <p><span >libelle  </span> : {{categorieDeRedevable.libelle}} </p>
-
-
-
-
-                      <!-- <p>{{longText}}</p> -->
-                    </mat-card-content>
-                    
-                  </mat-card>
-                </mat-tab>
-              
-                <mat-tab>
-                  <ng-template mat-tab-label>
-                    <mat-icon class="example-tab-icon">home</mat-icon>
-                    Local
-                  </ng-template>
-                  <mat-card class="example-card">
-                    <mat-card-header>
-                      <mat-card-title>{{categorieDeLocal.libelle}}</mat-card-title>
-                      <mat-card-subtitle>local</mat-card-subtitle>
-                    </mat-card-header>
-                    <mat-card-content class="local">
-                        <h4>Local  </h4>
-                      <p> <span>id</span> :  {{local.id}}</p>
-                      <p> <span>reference</span> :  {{local.reference}}</p>
-                      <p> <span>date ajout de local</span> :  {{local.dateAjoutDeLocal}}</p>
-                      <p> <span>dernier Date Payement Trimestriel</span> :  {{local.dernierDatePayTrimestriel}}</p>
-                      <p> <span>Localisation</span> :  {{rue.libelle}} - {{quartier.libelle}} - {{secteur.libelle}}</p>
-                      <h4>Categorie De Local  </h4>
-                      <p> <span>code</span> :  {{categorieDeLocal.code}}</p>
-                      <p> <span>libelle</span> :  {{categorieDeLocal.libelle}}</p>
-
-                    </mat-card-content>
-                   
-                  </mat-card>
-                </mat-tab>
-              
-                <mat-tab>
-                  <ng-template mat-tab-label>
-                    <mat-icon class="example-tab-icon">attach_money</mat-icon>
-                    Taux
-                  </ng-template>
-              
-                  <mat-card class="example-card">
-                    <mat-card-header>
-                      <mat-card-title>{{tauxTaxeTrimestrielle.pourcentage}}% from {{taxeTrimestrielle.chifrreAffaire | currency}}</mat-card-title>
-                      <mat-card-subtitle>taux taxe trimestrielle</mat-card-subtitle>
-                    </mat-card-header>
-                    <mat-card-content class="taux">
-                        <p> <span>id</span> :  {{tauxTaxeTrimestrielle.id}}</p>
-                        <p> <span>reference</span> :  {{tauxTaxeTrimestrielle.ref}}</p>
-                        <p> <span>date Application Minimale</span> :  {{tauxTaxeTrimestrielle.dateAppMin}}</p>
-                        <p> <span>date Application Maximale</span> :  {{tauxTaxeTrimestrielle.dateAppMax}}</p>
-                        <p> <span>pourcentage</span> :{{tauxTaxeTrimestrielle.pourcentage}}%</p>
-                        <p> <span>pourcentage Retard Premier Mois</span> :  {{tauxTaxeTrimestrielle.pourcentageRetardPremierMois}}%</p>
-                        <p> <span>pourcentage Retard Autre Mois</span> :  {{tauxTaxeTrimestrielle.pourcentageRetardAutreMois}}%</p>
-
-
-
-                        <!-- <p>{{longText}}</p> -->
-                    </mat-card-content>
-                    
-                  </mat-card>
-                </mat-tab>
-              </mat-tab-group>
+<div class="big-container">
+  <div class="header">
+  
+  </div>
+  <div class="container">
+    
+      <div class="searchBar">
+        <mat-form-field appearance="outline" class="myinput">
+          <mat-label>Check Taxes State:</mat-label>
+          <input matInput type="text" placeholder="entre reference of any local taxes " [(ngModel)]="taxeTrimestrielle.reference">
+        </mat-form-field>
+        <button mat-button class="searchBtn" (click)="findTaxe(taxeTrimestrielle.reference)">Search</button>
+      </div>
+      <div class="info-container">
+          <div class="info-cards" >
+              <mat-tab-group>
+                  <mat-tab>
+                    <ng-template mat-tab-label>
+                      <mat-icon class="example-tab-icon">perm_identity</mat-icon>
+                      Redevable
+                    </ng-template>
+                    <mat-card class="example-card">
+                      <mat-card-header>
+                        <mat-card-title>{{redevable.nom}} {{redevable.prenom}}</mat-card-title>
+                        <mat-card-subtitle>{{categorieDeRedevable.libelle}}</mat-card-subtitle>
+                      </mat-card-header>
+                      <mat-card-content class="redevable">
+                          <h4>Redevable  </h4>
+                          <p><span >id</span> : {{redevable.id}} </p>
+                        <p><span >nom</span> : {{redevable.nom}} </p>
+                        <p><span >prenom</span> : {{redevable.prenom}} </p>
+                        <p><span >cin</span> : {{redevable.cin}} </p>
+                          <h4>Categorie De Redevable  </h4>
+                        <p><span >Code  </span> : {{categorieDeRedevable.code}} </p>
+                        <p><span >libelle  </span> : {{categorieDeRedevable.libelle}} </p>
+                      </mat-card-content>
+                      
+                    </mat-card>
+                  </mat-tab>
+                
+                  <mat-tab>
+                    <ng-template mat-tab-label>
+                      <mat-icon class="example-tab-icon">home</mat-icon>
+                      Local
+                    </ng-template>
+                    <mat-card class="example-card">
+                      <mat-card-header>
+                        <mat-card-title>{{categorieDeLocal.libelle}}</mat-card-title>
+                        <mat-card-subtitle>local</mat-card-subtitle>
+                      </mat-card-header>
+                      <mat-card-content class="local">
+                          <h4>Local  </h4>
+                        <p> <span>id</span> :  {{local.id}}</p>
+                        <p> <span>reference</span> :  {{local.reference}}</p>
+                        <p> <span>date ajout de local</span> :  {{local.dateAjoutDeLocal}}</p>
+                        <p> <span>dernier Date Payement Trimestriel</span> :  {{local.dernierDatePayTrimestriel}}</p>
+                        <p> <span>Localisation</span> :  {{rue.libelle}} - {{quartier.libelle}} - {{secteur.libelle}}</p>
+                        <h4>Categorie De Local  </h4>
+                        <p> <span>code</span> :  {{categorieDeLocal.code}}</p>
+                        <p> <span>libelle</span> :  {{categorieDeLocal.libelle}}</p>
+  
+                      </mat-card-content>
+                     
+                    </mat-card>
+                  </mat-tab>
+                
+                  <mat-tab>
+                    <ng-template mat-tab-label>
+                      <mat-icon class="example-tab-icon">attach_money</mat-icon>
+                      Taux
+                    </ng-template>
+                
+                    <mat-card class="example-card">
+                      <mat-card-header>
+                        <mat-card-title>{{tauxTaxeTrimestrielle.pourcentage}}% from {{taxeTrimestrielle.chifrreAffaire | currency}}</mat-card-title>
+                        <mat-card-subtitle>taux taxe trimestrielle</mat-card-subtitle>
+                      </mat-card-header>
+                      <mat-card-content class="taux">
+                          <p> <span>id</span> :  {{tauxTaxeTrimestrielle.id}}</p>
+                          <p> <span>reference</span> :  {{tauxTaxeTrimestrielle.ref}}</p>
+                          <p> <span>date Application Minimale</span> :  {{tauxTaxeTrimestrielle.dateAppMin}}</p>
+                          <p> <span>date Application Maximale</span> :  {{tauxTaxeTrimestrielle.dateAppMax}}</p>
+                          <p> <span>pourcentage</span> :{{tauxTaxeTrimestrielle.pourcentage}}%</p>
+                          <p> <span>pourcentage Retard Premier Mois</span> :  {{tauxTaxeTrimestrielle.pourcentageRetardPremierMois}}%</p>
+                          <p> <span>pourcentage Retard Autre Mois</span> :  {{tauxTaxeTrimestrielle.pourcentageRetardAutreMois}}%</p>
+  
+  
+  
+                          <!-- <p>{{longText}}</p> -->
+                      </mat-card-content>
+                      
+                    </mat-card>
+                  </mat-tab>
+                </mat-tab-group>
+          </div>
+        <div class="chart-container">
+          
+          <div style="width: auto; height: 40%;margin : 5%; margin-top: 0; margin-bottom: 5%; " >
+            <canvas  id="myChart"></canvas>
+  
+          </div>
+          <div style="width: auto; height: 40%;margin : 5%; margin-top: 7vh;">
+            <canvas  id="mychart2"></canvas>
+  
+          </div>
+  
         </div>
-      <div class="chart-container">
-        
-        <div style="width: auto; height: 40%;margin : 5%; margin-top: 0; margin-bottom: 5%; " >
-          <canvas  id="myChart"></canvas>
-
-        </div>
-        <div style="width: auto; height: 40%;margin : 5%; margin-top: 7vh;">
-          <canvas  id="mychart2"></canvas>
-
-        </div>
-
       </div>
     </div>
-  </div>
- 
+   
+</div>

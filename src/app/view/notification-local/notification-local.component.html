@@ -1,0 +1,11 @@
+<div class="container" style="height: 100vh;">
+    <div style="margin-top: 10px;">
+        <div class="head"  >
+            <mat-form-field style="max-width:90%;">
+                <mat-label >Filter</mat-label>
+                <input  matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
+              </mat-form-field>
+              <button  class="add-button" mat-button (click)="openDialog3()">Add</button>
+            </div> 
+          
+</div>

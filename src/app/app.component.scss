@@ -1,14 +1,17 @@
+*{
+    padding: 0;
+}
 .example-spacer {
     flex: 1 1 auto;
 }
 .routing{
     display: inline-flex;
-    width: 40%;
+    width: 80%;//width: 40%;
     position: right;
     align-items: center;
     justify-items: center;
-    button{
-        padding: 10px 40px;
+   
+        padding: auto;//padding: 10px 40px;
         margin: 5px 15px;
         border-radius: 10px;
         background-color: rgb(4, 148, 153);
@@ -17,6 +20,50 @@
             font-size: 20px;
             font-weight: 600;
             color: whitesmoke;
+            cursor: pointer;
         }
-    }
+    
 }
+
+
+
+
+
+.example-icon {
+    padding: 0 14px;
+  }
+  
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+  
+
+  .navbar-items{
+    font-size: large; 
+    width: 70%;
+    a{
+        background-color: rgba(0, 255, 255, 0.233);
+        margin: 0px 10px;
+        padding: 5px 10px;
+        text-align: center;
+        border-radius: 5px;
+        transition: 0.8s;
+        cursor: pointer;
+    }
+    a:hover{
+        background-color: rgba(0, 255, 255, 0.507);
+        border-bottom: 3px solid white;
+        padding: 8px 15px;
+
+    }
+  }
+.content{
+    
+    height: 110vh;
+}
+
+.video-back{
+    height: 70vh;
+}
+
+
